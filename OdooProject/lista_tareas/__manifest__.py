@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Lista de tareas",
+    'name': "lista_tareas",
     'summary': """
     Sencilla Lista de tareas""",
     'description': """

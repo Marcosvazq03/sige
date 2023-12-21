@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-#Definimos el modelo de datos
+# Definimos el modelo de datos
 class lista_tareas(models.Model):
     # Nombre y descripcion del modelo de datos
     _name = 'lista_tareas.lista_tareas'
@@ -21,7 +21,7 @@ class lista_tareas(models.Model):
         # Para cada registro
         for record in self:
             # Si la prioridad es mayor que 10, se considera urgente, en otro caso no lo es
-            if record.prioridad>10:
+            if record.prioridad > 10:
                 record.urgente = True
             else:
                 record.urgente = False
