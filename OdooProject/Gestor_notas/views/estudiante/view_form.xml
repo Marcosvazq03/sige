@@ -1,0 +1,18 @@
+<odoo>
+    <!-- Vista de Formulario para Estudiante -->
+    <record model="ir.ui.view" id="view_estudiante_form">
+        <field name="name">estudiante.ver.form</field>
+        <field name="model">gestor.estudiante</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="apellido"/>
+                        <field name="carnet"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

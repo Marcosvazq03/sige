@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Menu para profesor -->
+        <record model="ir.actions.act_window" id="action_profesor_tree">
+            <field name="name">Ver profesores</field>
+            <field name="res_model">gestor.profesor</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_profesor_form"/>
+        </record>
+        <record model="ir.actions.act_window" id="action_profesor_form">
+            <field name="name">Nueva profesor</field>
+            <field name="res_model">gestor.profesor</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_profesor_tree"/>
+        </record>
+
+        <!-- Barra para profesor -->
+        <menuitem   id="menu_profesor" 
+                    name="Profesores" 
+                    parent="menu_principal"/>
+        <menuitem   id="menu_profesor_todos" 
+                    name="Ver todos" 
+                    parent="menu_profesor" 
+                    action="action_profesor_tree"
+                    groups="group_administrador,group_profesor"/>
+        <menuitem   id="menu_profesor_nuevo" 
+                    name="Nuevo" 
+                    parent="menu_profesor" 
+                    action="action_profesor_form"
+                    groups="group_administrador"/>
+    </data>
+</odoo>

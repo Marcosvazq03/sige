@@ -1,0 +1,15 @@
+<odoo>
+    <!-- Vista de Lista para Calificacion -->
+    <record model="ir.ui.view" id="view_calificacion_tree">
+        <field name="name">calificacion.ver.tree</field>
+        <field name="model">gestor.calificacion</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="estudiante_id"/>
+                <field name="clase_id"/>
+                <field name="nota"/>
+                <field name="fecha_calif"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,19 @@
+<odoo>
+    <!-- Vista de Formulario para Clase -->
+    <record model="ir.ui.view" id="view_clase_form">
+        <field name="name">clase.ver.form</field>
+        <field name="model">gestor.clase</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="profesor_id"/>
+                        <field name="name"/>
+                        <field name="codigo_curso"/>
+                        <field name="materia"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

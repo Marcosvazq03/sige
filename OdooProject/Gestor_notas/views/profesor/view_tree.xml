@@ -1,0 +1,14 @@
+<odoo>
+    <!-- Vista de Lista para Profesor -->
+    <record model="ir.ui.view" id="view_profesor_tree">
+        <field name="name">profesor.ver.tree</field>
+        <field name="model">gestor.profesor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="apellido"/>
+                <field name="no_identif"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

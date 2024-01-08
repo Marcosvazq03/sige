@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Menu para clase -->
+        <record model="ir.actions.act_window" id="action_clase_tree">
+            <field name="name">Ver clases</field>
+            <field name="res_model">gestor.clase</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_clase_form"/>
+        </record>
+        <record model="ir.actions.act_window" id="action_clase_form">
+            <field name="name">Nueva clase</field>
+            <field name="res_model">gestor.clase</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_clase_tree"/>
+        </record>
+
+        <!-- Barra para clase -->
+        <menuitem   id="menu_clase" 
+                    name="Clases" 
+                    parent="menu_principal"/>
+        <menuitem   id="menu_clase_todos" 
+                    name="Ver todos" 
+                    parent="menu_clase" 
+                    action="action_clase_tree"
+                    groups="group_administrador,group_profesor,group_estudiante"/>
+        <menuitem   id="menu_clase_nuevo" 
+                    name="Nuevo" 
+                    parent="menu_clase" 
+                    action="action_clase_form"
+                    groups="group_administrador"/>
+    </data>
+</odoo>

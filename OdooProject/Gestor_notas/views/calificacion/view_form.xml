@@ -1,0 +1,19 @@
+<odoo>
+    <!-- Vista de Formulario para Calificacion -->
+    <record model="ir.ui.view" id="view_calificacion_form">
+        <field name="name">calificacion.ver.form</field>
+        <field name="model">gestor.calificacion</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="estudiante_id"/>
+                        <field name="clase_id"/>
+                        <field name="nota"/>
+                        <field name="fecha_calif"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

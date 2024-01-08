@@ -1,0 +1,15 @@
+<odoo>
+    <!-- Vista de Lista para Clase -->
+    <record model="ir.ui.view" id="view_clase_tree">
+        <field name="name">clase.ver.tree</field>
+        <field name="model">gestor.clase</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="profesor_id"/>
+                <field name="name"/>
+                <field name="codigo_curso"/>
+                <field name="materia"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

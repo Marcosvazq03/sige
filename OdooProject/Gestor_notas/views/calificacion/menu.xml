@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Menu para calificacion -->
+        <record model="ir.actions.act_window" id="action_calificacion_tree">
+            <field name="name">Ver calificaciones</field>
+            <field name="res_model">gestor.calificacion</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_calificacion_form"/>
+        </record>
+        <record model="ir.actions.act_window" id="action_calificacion_form">
+            <field name="name">Nueva calificacion</field>
+            <field name="res_model">gestor.calificacion</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_calificacion_tree"/>
+        </record>
+
+        <!-- Barra para calificacion -->
+        <menuitem   id="menu_calificacion" 
+                    name="Calificaciones" 
+                    parent="menu_principal"/>
+        <menuitem   id="menu_calificacion_todos" 
+                    name="Ver todos" 
+                    parent="menu_calificacion" 
+                    action="action_calificacion_tree"
+                    groups="group_administrador,group_profesor,group_estudiante"/>
+        <menuitem   id="menu_calificacion_nuevo" 
+                    name="Nuevo" 
+                    parent="menu_calificacion" 
+                    action="action_calificacion_form"
+                    groups="group_administrador,group_profesor"/>
+    </data>
+</odoo>
