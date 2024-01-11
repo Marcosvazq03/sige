@@ -5,7 +5,7 @@
     'summary': 'Gestión de alumnado, empresas y tutorías FCT',
     'sequence': 10,
     'license': 'AGPL-3',
-    'author': 'Tu nombre',
+    'author': 'Marcos Vazquez',
     'website': 'https://www.tuweb.com',
     'depends': ['base'],
     'data': [
