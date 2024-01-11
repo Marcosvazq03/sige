@@ -10,9 +10,9 @@
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
+        'views/tutoriafct_view.xml',
         'views/alumnado_view.xml',
         'views/empresa_view.xml',
-        'views/tutoriafct_view.xml',
     ],
     'installable': True,
     'application': True,
