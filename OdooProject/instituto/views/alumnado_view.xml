@@ -1,0 +1,33 @@
+<odoo>
+    <record id="view_alumnado_form" model="ir.ui.view">
+        <field name="name">alumnado.form</field>
+        <field name="model">instituto.alumnado</field>
+        <field name="arch" type="xml">
+            <form string="Alumnado">
+                <field name="nombre"/>
+                <field name="apellidos"/>
+                <field name="fecha_nacimiento"/>
+                <field name="direccion"/>
+                <field name="codigo_postal"/>
+                <field name="email"/>
+                <field name="ciclo_formativo"/>
+                <field name="coche"/>
+                <field name="otros"/>
+                <field name="nota_media"/>
+                <field name="empresa_id"/>
+            </form>
+        </field>
+    </record>
+    <record id="view_alumnado_tree" model="ir.ui.view">
+        <field name="name">alumnado.tree</field>
+        <field name="model">instituto.alumnado</field>
+        <field name="arch" type="xml">
+            <tree string="Alumnado">
+                <field name="nombre"/>
+                <field name="apellidos"/>
+                <field name="ciclo_formativo"/>
+                <field name="empresa_id"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

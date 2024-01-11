@@ -1,0 +1,4 @@
+id,name,model_id:id,global,perm_read,perm_write,perm_create,perm_unlink
+rule_instituto_alumnado,model_instituto_alumnado,1,1,1,1,1
+rule_instituto_empresa,model_instituto_empresa,1,1,1,1,1
+rule_instituto_tutoriafct,model_instituto_tutoriafct,1,1,1,1,1
