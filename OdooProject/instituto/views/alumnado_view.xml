@@ -15,6 +15,7 @@
                 <field name="otros"/>
                 <field name="nota_media"/>
                 <field name="empresa_id"/>
+                <field name="tutoriafct_id"/>
             </form>
         </field>
     </record>
@@ -27,6 +28,7 @@
                 <field name="apellidos"/>
                 <field name="ciclo_formativo"/>
                 <field name="empresa_id"/>
+                <field name="tutoriafct_id"/>
             </tree>
         </field>
     </record>
