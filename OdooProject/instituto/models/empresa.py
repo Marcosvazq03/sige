@@ -12,4 +12,4 @@ class Empresa(models.Model):
         ('marketing', 'Marketing'),
         ('administracion', 'Administración'),
     ], string='Departamento', default='informatica')
-    alumnado_ids = fields.One2many('instituto.alumnado', 'empresa_id', string='instituto')
+    alumnado_ids = fields.One2many('instituto.alumnado', 'empresa_id', string='Alumnado')

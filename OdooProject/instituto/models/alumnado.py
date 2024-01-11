@@ -18,3 +18,4 @@ class Alumnado(models.Model):
     otros = fields.Text(string='Otros')
     nota_media = fields.Float(string='Nota Media', default=5.0)
     empresa_id = fields.Many2one('instituto.empresa', string='Empresa')
+    tutoriafct_id = fields.Many2one('instituto.tutoriafct', string='TutoriaFCT')
