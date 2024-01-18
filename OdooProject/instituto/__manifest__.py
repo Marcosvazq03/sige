@@ -6,10 +6,9 @@
     'sequence': 10,
     'license': 'AGPL-3',
     'author': 'Marcos Vazquez',
-    'website': 'https://www.tuweb.com',
     'depends': ['base'],
     'data': [
-        'security/ir.model.access.csv',
+        'views/menu_principal.xml',
         'views/tutoriafct_view.xml',
         'views/alumnado_view.xml',
         'views/empresa_view.xml',
