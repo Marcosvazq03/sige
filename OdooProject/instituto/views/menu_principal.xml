@@ -4,7 +4,9 @@
         <!-- Barra inicial -->
         <menuitem   id="menu_principal" 
                     name="Gestor de instituto"
-                    sequence="1"
+                    parent="base.menu_administration"
+                    sequence="10"
+                    groups="base.group_user"
         />
     </data>
 </odoo>
