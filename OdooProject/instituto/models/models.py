@@ -1,6 +1,5 @@
 from odoo import models, fields
 
-
 class TutoriaFCT(models.Model):
     _name = 'instituto.tutoriafct'
 
