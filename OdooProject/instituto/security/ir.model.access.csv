@@ -1,4 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_instituto_alumnado,model_instituto_alumnado,instituto.alumnado,,1,1,1,1
 access_instituto_empresa,model_instituto_empresa,instituto.empresa,,1,1,1,1
-access_instituto_tutoriafct,model_instituto_tutoriafct,instituto.tutoriafct,,1,1,1,1
