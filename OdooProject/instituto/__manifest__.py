@@ -1,5 +1,5 @@
 {
-    'name': 'Instituto',
+    'name': 'Instituto prueba',
     'version': '1.0',
     'category': 'Education',
     'summary': 'Gestión de alumnado, empresas y tutorías FCT',
