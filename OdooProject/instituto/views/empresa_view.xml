@@ -1,55 +1,25 @@
 <odoo>
-    <data>
-
-        <!-- Empresa tree view -->
-        <record id="view_empresa_tree" model="ir.ui.view">
-            <field name="name">empresa.tree</field>
-            <field name="model">instituto.empresa</field>
-            <field name="arch" type="xml">
-                <tree string="Empresa">
-                    <field name="nombre"/>
-                    <field name="direccion"/>
-                    <field name="telefono"/>
-                    <field name="departamento"/>
-                </tree>
-            </field>
-        </record>
-
-        <!-- Empresa form view -->
-        <record id="view_empresa_form" model="ir.ui.view">
-            <field name="name">empresa.form</field>
-            <field name="model">instituto.empresa</field>
-            <field name="arch" type="xml">
-                <form string="Empresa">
-                    <sheet>
-                        <group>
-                            <field name="nombre"/>
-                            <field name="direccion"/>
-                            <field name="telefono"/>
-                            <field name="departamento"/>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
-
-        <!-- Menu items -->
-        <menuitem id="main_menu" name="Instituto"/>
-        <menuitem id="menu_alumnado" name="Alumnado" parent="main_menu" action="action_alumnado"/>
-        <menuitem id="menu_empresa" name="Empresas" parent="main_menu" action="action_empresa"/>
-
-        <!-- Window actions -->
-        <record id="action_alumnado" model="ir.actions.act_window">
-            <field name="name">Alumnado</field>
-            <field name="res_model">instituto.alumnado</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-
-        <record id="action_empresa" model="ir.actions.act_window">
-            <field name="name">Empresa</field>
-            <field name="res_model">instituto.empresa</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-
-    </data>
+    <record id="view_empresa_form" model="ir.ui.view">
+        <field name="name">empresa.form</field>
+        <field name="model">instituto.empresa</field>
+        <field name="arch" type="xml">
+            <form string="Empresa">
+                <field name="nombre"/>
+                <field name="direccion"/>
+                <field name="telefono"/>
+                <field name="departamento"/>
+                <field name="alumnado_ids"/>
+            </form>
+        </field>
+    </record>
+    <record id="view_empresa_tree" model="ir.ui.view">
+        <field name="name">empresa.tree</field>
+        <field name="model">instituto.empresa</field>
+        <field name="arch" type="xml">
+            <tree string="Empresa">
+                <field name="nombre"/>
+                <field name="departamento"/>
+            </tree>
+        </field>
+    </record>
 </odoo>
