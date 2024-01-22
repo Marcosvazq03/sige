@@ -23,11 +23,11 @@
                     name="Ver todos" 
                     parent="menu_alumnado" 
                     action="action_alumnado_tree"
-                    groups="group_user"/>
+                    groups="group_administrador,group_alumnado"/>
         <menuitem   id="menu_alumnado_nuevo" 
                     name="Nuevo" 
                     parent="menu_alumnado" 
                     action="action_alumnado_form"
-                    groups="group_user"/>
+                    groups="group_administrador"/>
     </data>
 </odoo>

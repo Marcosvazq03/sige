@@ -23,11 +23,11 @@
                     name="Ver todos" 
                     parent="menu_tutoriafct" 
                     action="action_tutoriafct_tree"
-                    groups="group_user"/>
+                    groups="group_administrador,group_empresa,group_alumnado"/>
         <menuitem   id="menu_tutoriafct_nuevo" 
                     name="Nuevo" 
                     parent="menu_tutoriafct" 
                     action="action_tutoriafct_form"
-                    groups="group_user"/>
+                    groups="group_administrador"/>
     </data>
 </odoo>
