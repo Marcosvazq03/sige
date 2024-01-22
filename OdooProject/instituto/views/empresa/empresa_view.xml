@@ -18,7 +18,10 @@
         <field name="arch" type="xml">
             <tree string="Empresa">
                 <field name="nombre"/>
+                <field name="direccion"/>
+                <field name="telefono"/>
                 <field name="departamento"/>
+                <field name="alumnado_ids"/>
             </tree>
         </field>
     </record>

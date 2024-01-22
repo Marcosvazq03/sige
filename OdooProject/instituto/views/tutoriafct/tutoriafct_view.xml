@@ -17,6 +17,9 @@
         <field name="arch" type="xml">
             <tree string="TutoriaFCT">
                 <field name="nombre_tutor"/>
+                <field name="email_tutor"/>
+                <field name="telefono_tutor"/>
+                <field name="alumnado_ids"/>
             </tree>
         </field>
     </record>
