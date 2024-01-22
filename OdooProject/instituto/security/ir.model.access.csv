@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_tutoriafct,tutoriafct.model_tutoriafct,model_instituto_tutoriafct,base.group_user,1,1,1,1
-access_alumnado,instituto.alumnado,model_instituto_alumnado,base.group_user,1,1,1,1
-access_empresa,instituto.empresa,model_instituto_empresa,base.group_user,1,1,1,1

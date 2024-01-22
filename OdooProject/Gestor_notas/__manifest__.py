@@ -7,10 +7,10 @@
     'author': 'Christofer Borrayo',
     'data': [
         'security/groups.xml',
-        'security/clase.xml',
-        'security/estudiante.xml',
+        'security/empresa.xml',
+        'security/tutoriafct.xml',
         'security/profesor.xml',
-        'security/calificacion.xml',
+        'security/alumnado.xml',
 
         'views/menu_principal.xml',
 

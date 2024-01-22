@@ -8,7 +8,10 @@
     'author': 'Marcos Vazquez',
     'depends': ['base'],
     'data': [
-        'security/ir.model.access.csv',
+        'security/groups.xml',
+        'security/tutoriafct.xml',
+        'security/alumnado.xml',
+        'security/empresa.xml',
         'views/menu_principal.xml',
         'views/tutoriafct/tutoriafct_view.xml',
         'views/tutoriafct/menu.xml',
