@@ -23,7 +23,7 @@
         <field name="name">alumnado.tree</field>
         <field name="model">instituto.alumnado</field>
         <field name="arch" type="xml">
-            <tree string="Alumnado">
+            <tree string="Alumnado" editable="bottom" delete="true">
                 <field name="nombre"/>
                 <field name="apellidos"/>
                 <field name="fecha_nacimiento"/>
