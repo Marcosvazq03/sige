@@ -14,6 +14,13 @@
             <field name="view_mode">form</field>
             <field name="view_id" ref="view_alumnado_tree"/>
         </record>
+        <record model="ir.actions.act_window" id="action_alumnado_tree">
+            <field name="name">Ver alumnado</field>
+            <field name="res_model">instituto.alumnado</field>
+            <field name="view_mode">tree,search</field>
+            <field name="view_id" ref="view_alumnado_form"/>
+            <field name="search_view_id" ref="view_alumnado_search"/>
+        </record>
 
         <!-- Barra para alumnado -->
         <menuitem   id="menu_alumnado" 
