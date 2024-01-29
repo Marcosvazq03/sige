@@ -25,9 +25,19 @@ class Alumnado(models.Model):
     coche = fields.Boolean(string='Coche')
     otros = fields.Text(string='Otros')
     nota_media = fields.Float(string='Nota Media', default=5.0)
+    nota_media_texto = fields.Char(string='Nota Media en Texto', default='aprobado',
+                                   compute='_compute_nota_media_texto')
     empresa_id = fields.Many2one('instituto.empresa', string='Empresa')
     tutoriafct_id = fields.Many2one('instituto.tutoriafct', string='TutoriaFCT')
 
+    def _compute_nota_media_texto(self):
+        for record in self:
+            if 5 <= record.nota_media < 7:
+                record.nota_media_texto = 'aprobado'
+            elif 7 <= record.nota_media < 9:
+                record.nota_media_texto = 'notable'
+            elif 9 <= record.nota_media <= 10:
+                record.nota_media_texto = 'sobresaliente'
 
 class Empresa(models.Model):
     _name = 'instituto.empresa'
