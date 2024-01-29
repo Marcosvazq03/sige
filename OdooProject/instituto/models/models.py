@@ -32,7 +32,9 @@ class Alumnado(models.Model):
 
     def _compute_nota_media_texto(self):
         for record in self:
-            if 5 <= record.nota_media < 7:
+            if 0 <= record.nota_media < 5:
+                record.nota_media_texto = 'suspendido'
+            elif 5 <= record.nota_media < 7:
                 record.nota_media_texto = 'aprobado'
             elif 7 <= record.nota_media < 9:
                 record.nota_media_texto = 'notable'
