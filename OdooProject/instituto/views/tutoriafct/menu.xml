@@ -5,7 +5,7 @@
         <record model="ir.actions.act_window" id="action_tutoriafct_tree">
             <field name="name">Ver tutoriafcts</field>
             <field name="res_model">instituto.tutoriafct</field>
-            <field name="view_mode">tree, form</field>
+            <field name="view_mode">tree,form</field>
             <field name="view_id" ref="view_tutoriafct_form"/>
         </record>
         <record model="ir.actions.act_window" id="action_tutoriafct_form">
