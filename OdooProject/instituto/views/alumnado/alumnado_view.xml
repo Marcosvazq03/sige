@@ -1,9 +1,11 @@
 <odoo>
+    <!-- Definición de la vista formulario para el modelo Alumnado -->
     <record id="view_alumnado_form" model="ir.ui.view">
-        <field name="name">alumnado.form</field>
-        <field name="model">instituto.alumnado</field>
+        <field name="name">alumnado.form</field>  <!-- Nombre de la vista -->
+        <field name="model">instituto.alumnado</field>  <!-- Modelo al que se aplica la vista -->
         <field name="arch" type="xml">
-            <form string="Alumnado">
+            <form string="Alumnado">  <!-- Definición del formulario -->
+                <!-- Campos que se mostrarán en el formulario -->
                 <field name="nombre"/>
                 <field name="apellidos"/>
                 <field name="fecha_nacimiento"/>
@@ -20,11 +22,14 @@
             </form>
         </field>
     </record>
+
+    <!-- Definición de la vista lista para el modelo Alumnado -->
     <record id="view_alumnado_tree" model="ir.ui.view">
-        <field name="name">alumnado.tree</field>
-        <field name="model">instituto.alumnado</field>
+        <field name="name">alumnado.tree</field>  <!-- Nombre de la vista -->
+        <field name="model">instituto.alumnado</field>  <!-- Modelo al que se aplica la vista -->
         <field name="arch" type="xml">
-            <tree string="Alumnado">
+            <tree string="Alumnado">  <!-- Definición de la lista -->
+                <!-- Campos que se mostrarán en la lista -->
                 <field name="nombre"/>
                 <field name="apellidos"/>
                 <field name="fecha_nacimiento"/>
@@ -41,11 +46,14 @@
             </tree>
         </field>
     </record>
+
+    <!-- Definición de la vista de búsqueda para el modelo Alumnado -->
     <record id="view_alumnado_search" model="ir.ui.view">
-        <field name="name">alumnado.search</field>
-        <field name="model">instituto.alumnado</field>
+        <field name="name">alumnado.search</field>  <!-- Nombre de la vista -->
+        <field name="model">instituto.alumnado</field>  <!-- Modelo al que se aplica la vista -->
         <field name="arch" type="xml">
-            <search string="Buscar Alumnado">
+            <search string="Buscar Alumnado">  <!-- Definición de la búsqueda -->
+                <!-- Campos en los que se buscará -->
                 <field name="nombre"/>
                 <field name="apellidos"/>
             </search>
