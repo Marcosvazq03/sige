@@ -24,6 +24,6 @@
                     parent="menu_alumnado"
                     action="action_alumnado_tree"
                     groups="group_administrador,group_alumnado"/>  <!-- Submenú para ver todos los alumnos -->
-        
+
     </data>
 </odoo>
