@@ -13,14 +13,17 @@ class TutoriaFCT(models.Model):
     @api.onchange('nombre_tutor')
     def _notificar_usuario(self):
         if self.nombre_tutor:
-            self.env['bus.bus'].sendmany([[(self._cr.dbname, 'res.partner', self.env.user.partner_id.id),
-                {
-                    'type': 'simple_notification',
-                    'title': 'Notificación',
-                    'message': '¡El evento ha ocurrido!',
-                    'sticky': False,
-                    'warning': False,
-                }]])
+            notification = {
+                'type': 'simple_notification',
+                'title': 'Notificación',
+                'message': '¡El evento ha ocurrido!',
+                'sticky': False,
+                'warning': False,
+            }
+            self.env['bus.bus'].sendone(
+                (self._cr.dbname, 'res.partner', self.env.user.partner_id.id),
+                notification
+            )
 
 # Definimos la clase Alumnado que representa a un alumno en el instituto.
 class Alumnado(models.Model):
