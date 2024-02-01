@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 # Definimos la clase TutoriaFCT que representa una tutoría de FCT en el instituto.
 class TutoriaFCT(models.Model):
@@ -9,6 +9,20 @@ class TutoriaFCT(models.Model):
     email_tutor = fields.Char(string='Email del Tutor')  # Email del tutor
     telefono_tutor = fields.Char(string='Teléfono del Tutor')  # Teléfono del tutor
     alumnado_ids = fields.One2many('instituto.alumnado', 'tutoriafct_id', string='Alumnado')  # Relación con el modelo Alumnado
+
+    @api.onchange('nombre_tutor')
+    def _notificar_usuario(self):
+        if self.nombre_tutor:
+            self.env['bus.bus'].sendone(
+                (self._cr.dbname, 'res.partner', self.env.user.partner_id.id),
+                {
+                    'type': 'simple_notification',
+                    'title': 'Notificación',
+                    'message': '¡El evento ha ocurrido!',
+                    'sticky': False,
+                    'warning': False,
+                }
+            )
 
 # Definimos la clase Alumnado que representa a un alumno en el instituto.
 class Alumnado(models.Model):
