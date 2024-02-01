@@ -20,10 +20,7 @@ class TutoriaFCT(models.Model):
                 'sticky': False,
                 'warning': False,
             }
-            self.env['bus.bus'].sendone(
-                (self._cr.dbname, 'res.partner', self.env.user.partner_id.id),
-                notification
-            )
+            self.env['bus.bus'].sendmany([[(self._cr.dbname, 'res.partner', self.env.user.partner_id.id), notification]])
 
 # Definimos la clase Alumnado que representa a un alumno en el instituto.
 class Alumnado(models.Model):
