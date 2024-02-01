@@ -9,7 +9,6 @@
             <field name="view_id" ref="view_empresa_form"/>
             <field name="view_id" ref="view_empresa_tree"/>
         </record>
-        
 
         <!-- Barra para empresa -->
         <menuitem   id="menu_empresa" 

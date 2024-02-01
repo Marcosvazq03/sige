@@ -6,16 +6,9 @@
         <record model="ir.actions.act_window" id="action_alumnado_tree">
             <field name="name">Ver alumnado</field>  <!-- Nombre de la acción -->
             <field name="res_model">instituto.alumnado</field>  <!-- Modelo al que se aplica la acción -->
-            <field name="view_mode">tree,search</field>  <!-- Modos de vista disponibles para esta acción -->
+            <field name="view_mode">tree,search,form</field>  <!-- Modos de vista disponibles para esta acción -->
             <field name="view_id" ref="view_alumnado_form"/>  <!-- Vista por defecto para esta acción -->
             <field name="search_view_id" ref="view_alumnado_search"/>  <!-- Vista de búsqueda para esta acción -->
-        </record>
-
-        <!-- Este registro define la acción de crear un nuevo alumno -->
-        <record model="ir.actions.act_window" id="action_alumnado_form">
-            <field name="name">Nueva alumnado</field>  <!-- Nombre de la acción -->
-            <field name="res_model">instituto.alumnado</field>  <!-- Modelo al que se aplica la acción -->
-            <field name="view_mode">form</field>  <!-- Modos de vista disponibles para esta acción -->
             <field name="view_id" ref="view_alumnado_tree"/>  <!-- Vista por defecto para esta acción -->
         </record>
 
