@@ -6,7 +6,7 @@
     'sequence': 10,  # Orden de la aplicación en el menú
     'license': 'AGPL-3',  # Licencia bajo la que se distribuye la aplicación
     'author': 'Marcos Vazquez',  # Autor de la aplicación
-    'depends': ['base', 'bus'],  # Módulos de los que depende la aplicación
+    'depends': ['base'],  # Módulos de los que depende la aplicación
     'data': [  # Archivos de datos que se cargarán con la aplicación
         'security/groups.xml',
         'security/tutoriafct.xml',
