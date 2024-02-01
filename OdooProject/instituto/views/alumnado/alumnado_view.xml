@@ -56,6 +56,10 @@
                 <!-- Campos en los que se buscará -->
                 <field name="nombre"/>
                 <field name="apellidos"/>
+                <!-- Filtro para estudiantes con nota media mayor a 9 -->
+                <filter string="Nota Media > 9" name="nota_media" domain="[('nota_media', '>', 9)]"/>
+                <!-- Filtro para estudiantes que tienen coche -->
+                <filter string="Tiene Coche" name="tiene_coche" domain="[('coche', '=', True)]"/>
             </search>
         </field>
     </record>
