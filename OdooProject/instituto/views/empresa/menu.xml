@@ -19,10 +19,5 @@
                     parent="menu_empresa" 
                     action="action_empresa_tree"
                     groups="group_administrador,group_empresa"/>
-        <menuitem   id="menu_empresa_nuevo" 
-                    name="Nuevo" 
-                    parent="menu_empresa" 
-                    action="action_empresa_form"
-                    groups="group_administrador"/>
     </data>
 </odoo>

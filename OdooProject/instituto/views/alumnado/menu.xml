@@ -24,12 +24,6 @@
                     parent="menu_alumnado"
                     action="action_alumnado_tree"
                     groups="group_administrador,group_alumnado"/>  <!-- Submenú para ver todos los alumnos -->
-
-        <!-- Este registro define el submenú para crear un nuevo alumno -->
-        <menuitem   id="menu_alumnado_nuevo"
-                    name="Nuevo"
-                    parent="menu_alumnado"
-                    action="action_alumnado_form"
-                    groups="group_administrador"/>  <!-- Submenú para crear un nuevo alumno -->
+        
     </data>
 </odoo>
