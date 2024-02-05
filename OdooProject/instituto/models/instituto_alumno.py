@@ -27,10 +27,11 @@ class InstitutoAlumno(models.Model):
         help="Ciclo formativo")
     coche = fields.Boolean(string='Coche')
     otros = fields.Char(string='Otros')
-    media = fields.Float(string='Nota Media', default="5.0")
-
-    # Calcular el campo de texto de la media
-    mediaTxt = fields.Char(string='Nota Media', default="Aprobado", compute="_media_txt", readonly=True)
+    actitud = fields.Float(string='Actitud')
+    ejercicios_clase = fields.Float(string='Ejercicios de Clase')
+    proyecto = fields.Float(string='Proyecto')
+    examen_proyecto = fields.Float(string='Examen sobre el Proyecto')
+    nota_media = fields.Float(string='Nota Media', compute='_compute_nota_media')
 
     @api.constrains('fechNac')
     def check_edad(self):
@@ -42,20 +43,11 @@ class InstitutoAlumno(models.Model):
                     edad -= 1
                 if edad < 16:
                     raise models.ValidationError('El alumno debe tener al menos 16 años.')
-    
-    @api.depends("media")
-    def _media_txt(self):
+
+    @api.depends('actitud', 'ejercicios_clase', 'proyecto', 'examen_proyecto')
+    def _compute_nota_media(self):
         for record in self:
-            if record.media < 5:
-                record.mediaTxt = "Suspenso"
-            else:
-                if record.media < 7:
-                    record.mediaTxt = "Aprobado"
-                else:
-                    if record.media < 9:
-                        record.mediaTxt = "Notable"
-                    else:
-                        record.mediaTxt = "Sobresaliente"
+            record.nota_media = 0.05 * record.actitud + 0.20 * record.ejercicios_clase + 0.55 * record.proyecto + 0.20 * record.examen_proyecto
 
     # Campo empresa
     empresa_id = fields.Many2one("instituto.empresa", string="Empresa", required=True)

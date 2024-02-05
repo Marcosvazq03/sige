@@ -17,7 +17,7 @@ class InstitutoProfesor(models.Model):
     name = fields.Char(required=True, string='Nombre')
     apellidos = fields.Char(required=True, string='Apellidos')
     email = fields.Char(string='Email')
-    ciclo = fields.Selection(
+    departamento = fields.Selection(
         string='Ciclo formativo',
         selection=[('informatica', 'Informatica'), ('comercio', 'Comercio'), ('marketing', 'Marketing'), ('administracion', 'Administracion')], default="informatica", required=True,
         help="Departamento")

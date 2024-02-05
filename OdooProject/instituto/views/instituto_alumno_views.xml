@@ -42,8 +42,11 @@
                         </group>
                         <group>
                             <field name="ciclo"/>
-                            <field name="media"/>
-                            <field name="mediaTxt"/>
+                            <field name="actitud"/>
+                            <field name="ejercicios_clase"/>
+                            <field name="proyecto"/>
+                            <field name="examen_proyecto"/>
+                            <field name="nota_media"/>
                             <field name="empresa_id"/>
                         </group>
                     </group>
@@ -60,27 +63,6 @@
                     </notebook>
                 </sheet>
             </form>
-        </field>
-    </record>
-
-
-     <!-- Vista Busqueda a la altura de la de arbol -->
-    <record id="instituto_alumno_view_search" model="ir.ui.view">
-        <field name="name">instituto.alumno.search</field>
-        <field name="model">instituto.alumno</field>
-        <field name="arch" type="xml">
-            <search string="Buscar...">
-                <field name="name"/>
-                <field name="ap"/>
-                <field name="email"/>
-                <!-- Filtro de la tolva -->
-                <filter string="Media mayor de 9" name="media" domain="[('media', '>', '9')]"/>
-                <separator/>
-                 <!-- Filtro Agrupar por -->
-                <group expand="1" string="Group By">
-                        <filter string="Coche" name="coche" context="{'group_by':'coche'}"/>
-                </group>
-            </search>
         </field>
     </record>
 

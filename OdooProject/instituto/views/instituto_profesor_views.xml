@@ -15,21 +15,19 @@
         <field name="model">instituto.profesor</field>
         <field name="arch" type="xml">
             <tree>
-                <!-- Los nombres de los campos corresponden al nombre de los atributos del alumno -->
+                <!-- Los nombres de los campos corresponden al nombre de los atributos del profesor -->
                 <field name="name"/>
-                <field name="ap"/>
+                <field name="apellidos"/>
                 <field name="email"/>
-                <field name="ciclo"/>
-                <field name="coche"/>
-                <field name="media"/>
+                <field name="departamento"/>
             </tree>
         </field>
     </record>
 
      <!-- Vista Formulario una vez entras a un registro -->
     <record id="instituto_alumno_view_form" model="ir.ui.view">
-        <field name="name">instituto.alumno.form</field>
-        <field name="model">instituto.alumno</field>
+        <field name="name">instituto.profesor.form</field>
+        <field name="model">instituto.profesor</field>
         <field name="arch" type="xml">
             <form string="Empresa">
                 <sheet>
@@ -63,11 +61,10 @@
         </field>
     </record>
 
-
-     <!-- Vista Busqueda a la altura de la de arbol -->
-    <record id="instituto_alumno_view_search" model="ir.ui.view">
-        <field name="name">instituto.alumno.search</field>
-        <field name="model">instituto.alumno</field>
+    <!-- Vista Busqueda a la altura de la de arbol -->
+    <record id="instituto_profesor_view_search" model="ir.ui.view">
+        <field name="name">instituto.profesor.search</field>
+        <field name="model">instituto.profesor</field>
         <field name="arch" type="xml">
             <search string="Buscar...">
                 <field name="name"/>
