@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <!-- Practicas View -->
+
+<odoo>
+    <!-- Vista Arbol al crear un nuevo registro -->
+    <record id="instituto_practicas_view_tree" model="ir.ui.view">
+        <field name="name">instituto.practicas.tree</field>
+        <field name="model">instituto.practicas</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Los nombres de los campos corresponden al nombre de los atributos del alumno -->
+                <field name="alumno_id"/>
+                <field name="anio"/>
+                <field name="aprobado"/>
+            </tree>
+        </field>
+    </record>
+
+
+     <!-- Vista Formulario una vez entras a un registro -->
+    <record id="instituto_practicas_view_form" model="ir.ui.view">
+        <field name="name">instituto.practicas.form</field>
+        <field name="model">instituto.practicas</field>
+        <field name="arch" type="xml">
+            <form string="Empresa">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="alumno_id"/>
+                            <field name="anio"/>
+                            <field name="aprobado"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
