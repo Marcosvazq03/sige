@@ -33,6 +33,7 @@ class Alumnado(models.Model):
 
 
 
+
 class Empresa(models.Model):
     _name = 'instituto.empresa'
 

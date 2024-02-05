@@ -34,51 +34,30 @@
                     <group>
                         <group name = "Datos personales">
                             <field name="name"/>
-                            <field name="ap"/>
+                            <field name="apellidos"/>
                             <field name="email"/>
-                            <field name="coche"/>
                         </group>
                         <group>
-                            <field name="ciclo"/>
-                            <field name="media"/>
-                            <field name="mediaTxt"/>
-                            <field name="empresa_id"/>
+                            <field name="departamento"/>
                         </group>
                     </group>
-                    <!-- El orden del notebook tiene que ser así para que salgan los labels -->
-                    <notebook>
-                        <page string="Datos Personales">
-                            <group>
-                            <field name="fechNac"/>
-                            <field name="dir"/>
-                            <field name="codPostal"/>
-                            <field name="otros"/>
-                            </group>
-                        </page>
-                    </notebook>
                 </sheet>
             </form>
         </field>
     </record>
 
-    <!-- Vista Busqueda a la altura de la de arbol -->
-    <record id="instituto_profesor_view_search" model="ir.ui.view">
-        <field name="name">instituto.profesor.search</field>
-        <field name="model">instituto.profesor</field>
-        <field name="arch" type="xml">
-            <search string="Buscar...">
-                <field name="name"/>
-                <field name="ap"/>
-                <field name="email"/>
-                <!-- Filtro de la tolva -->
-                <filter string="Media mayor de 9" name="media" domain="[('media', '>', '9')]"/>
-                <separator/>
-                 <!-- Filtro Agrupar por -->
-                <group expand="1" string="Group By">
-                        <filter string="Coche" name="coche" context="{'group_by':'coche'}"/>
-                </group>
-            </search>
-        </field>
-    </record>
+    <record id="view_profesor_search" model="ir.ui.view">
+    <field name="name">profesor.search</field>
+    <field name="model">profesor</field>
+    <field name="arch" type="xml">
+        <search string="Buscar Profesor">
+            <field name="name" string="Nombre"/>
+            <field name="departamento" string="Departamento"/>
+            <group expand="0" string="Agrupar por">
+                <filter string="Departamento" domain="[]" context="{'group_by':'departamento'}"/>
+            </group>
+        </search>
+    </field>
+</record>
 
 </odoo>
