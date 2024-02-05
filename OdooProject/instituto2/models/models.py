@@ -30,25 +30,10 @@ class Alumnado(models.Model):
     tutoriafct_id = fields.Many2one('instituto.tutoriafct', string='TutoriaFCT')
 
 
-class Alumno(models.Model):
-    _name = 'alumno'
-
-    actitud = fields.Float(string='Actitud')
-    ejercicios_clase = fields.Float(string='Ejercicios de Clase')
-    proyecto = fields.Float(string='Proyecto')
-    examen_proyecto = fields.Float(string='Examen sobre el Proyecto')
-    nota_media = fields.Float(string='Nota Media', compute='_compute_nota_media')
-
-    @api.depends('actitud', 'ejercicios_clase', 'proyecto', 'examen_proyecto')
-    def _compute_nota_media(self):
-        for record in self:
-            record.nota_media = 0.05 * record.actitud + 0.20 * record.ejercicios_clase + 0.55 * record.proyecto + 0.20 * record.examen_proyecto
 
 
+Dentro de la vista lista del objeto
 
-
-
-en una clase de odoo tengo un atributo notas con 4 campos: 5% actitud,20% ejercicios de clase, 55% proyecto, 20% examen sobre el propio proyecto. En el atributo nota_media tiene que generarse solo teniendo encuenta los % con las notas que introduzca el usuario
 class Empresa(models.Model):
     _name = 'instituto.empresa'
 
