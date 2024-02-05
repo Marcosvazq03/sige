@@ -5,7 +5,8 @@
 <odoo>
     <!-- Una vez hecho esto declaramos la acción en un nuevo fichero views.xml -->
     <menuitem id="instituto_menu_root" name="Instituto ">
-        <menuitem id="instituto_asignatura_menu_action" action="instituto_asignatura_action"/>
+        <menuitem id="instituto_asignatura_menu_action" action="instituto_asignatura_action">
+        </menuitem>
         <menuitem id="instituto_configuracion_menu" name="Datos">
             <menuitem id="instituto_alumno_menu_action" action="instituto_alumno_action"/>
             <menuitem id="instituto_empresa_menu_action" action="instituto_empresa_action"/>

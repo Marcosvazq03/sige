@@ -6,7 +6,7 @@
     <record id="instituto_empresa_action" model="ir.actions.act_window">
         <field name="name">Empresas</field>
         <field name="res_model">instituto.empresa</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,search</field>
     </record>
 
     <!-- Vista Arbol al crear un nuevo registro -->
