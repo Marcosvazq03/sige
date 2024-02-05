@@ -23,7 +23,7 @@ class InstitutoAlumno(models.Model):
     email = fields.Char(string='Email')
     ciclo = fields.Selection(
         string='Ciclo formativo',
-        selection=[('dam','DAM'), ('daw', 'DAW'), ('asir', 'ASIR')], default="dam", required=True,
+        selection=[('dam', 'DAM'), ('daw', 'DAW'), ('asir', 'ASIR')], default="dam", required=True,
         help="Ciclo formativo")
     coche = fields.Boolean(string='Coche')
     otros = fields.Char(string='Otros')
