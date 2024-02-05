@@ -54,7 +54,7 @@
                 <field name="name" string="Nombre"/>
                 <field name="departamento" string="Departamento"/>
                 <group expand="1" string="Agrupar por">
-                    <filter string="Departamento" domain="[]" context="{'group_by':'departamento'}"/>
+                    <filter string="Departamento" name="departamento" context="{'group_by':'departamento'}"/>
                 </group>
             </search>
         </field>
