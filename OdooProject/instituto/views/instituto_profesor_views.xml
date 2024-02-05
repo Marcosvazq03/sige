@@ -25,7 +25,7 @@
     </record>
 
      <!-- Vista Formulario una vez entras a un registro -->
-    <record id="instituto_alumno_view_form" model="ir.ui.view">
+    <record id="instituto_profesor_view_form" model="ir.ui.view">
         <field name="name">instituto.profesor.form</field>
         <field name="model">instituto.profesor</field>
         <field name="arch" type="xml">
@@ -46,7 +46,7 @@
         </field>
     </record>
 
-    <record id="view_profesor_search" model="ir.ui.view">
+    <record id="instituto_profesor_view_search" model="ir.ui.view">
     <field name="name">profesor.search</field>
     <field name="model">profesor</field>
     <field name="arch" type="xml">
