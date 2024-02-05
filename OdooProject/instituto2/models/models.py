@@ -29,6 +29,21 @@ class Alumnado(models.Model):
     empresa_id = fields.Many2one('instituto.empresa', string='Empresa')
     tutoriafct_id = fields.Many2one('instituto.tutoriafct', string='TutoriaFCT')
 
+class Alumno(models.Model):
+    _name = 'alumno'
+
+    fecha_nacimiento = fields.Date(string='Fecha de Nacimiento')
+
+    @api.constrains('fecha_nacimiento')
+    def check_edad(self):
+        for record in self:
+            if record.fecha_nacimiento:
+                fecha_nacimiento = fields.Date.from_string(record.fecha_nacimiento)
+                edad = date.today().year - fecha_nacimiento.year
+                if ((date.today().month, date.today().day) < (fecha_nacimiento.month, fecha_nacimiento.day)):
+                    edad -= 1
+                if edad < 16:
+                    raise models.ValidationError('El alumno debe tener al menos 16 años.')
 
 class Empresa(models.Model):
     _name = 'instituto.empresa'

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
+from datetime import date
 
 from odoo import fields, models, api
 
@@ -22,14 +23,25 @@ class InstitutoAlumno(models.Model):
     email = fields.Char(string='Email')
     ciclo = fields.Selection(
         string='Ciclo formativo',
-        selection=[('dam','DAM'), ('daw','DAW'), ('asir','ASIR')], default = "dam", required=True,
+        selection=[('dam','DAM'), ('daw', 'DAW'), ('asir', 'ASIR')], default="dam", required=True,
         help="Ciclo formativo")
     coche = fields.Boolean(string='Coche')
     otros = fields.Char(string='Otros')
-    media = fields.Float(string='Nota Media', default = "5.0")
+    media = fields.Float(string='Nota Media', default="5.0")
 
     # Calcular el campo de texto de la media
-    mediaTxt = fields.Char(string='Nota Media', default = "Aprobado", compute="_media_txt", readonly=True)
+    mediaTxt = fields.Char(string='Nota Media', default="Aprobado", compute="_media_txt", readonly=True)
+
+    @api.constrains('fechNac')
+    def check_edad(self):
+        for record in self:
+            if record.fechNac:
+                fecha_nacimiento = fields.Date.from_string(record.fechNac)
+                edad = date.today().year - fecha_nacimiento.year
+                if ((date.today().month, date.today().day) < (fecha_nacimiento.month, fecha_nacimiento.day)):
+                    edad -= 1
+                if edad < 16:
+                    raise models.ValidationError('El alumno debe tener al menos 16 años.')
     
     @api.depends("media")
     def _media_txt(self):
