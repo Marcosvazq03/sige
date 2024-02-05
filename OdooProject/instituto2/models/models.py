@@ -32,7 +32,6 @@ class Alumnado(models.Model):
 
 
 
-Dentro de la vista lista del objeto
 
 class Empresa(models.Model):
     _name = 'instituto.empresa'
