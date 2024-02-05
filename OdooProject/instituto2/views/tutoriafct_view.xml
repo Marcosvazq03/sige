@@ -1,0 +1,23 @@
+<odoo>
+    <record id="view_tutoriafct_form" model="ir.ui.view">
+        <field name="name">tutoriafct.form</field>
+        <field name="model">instituto.tutoriafct</field>
+        <field name="arch" type="xml">
+            <form string="TutoriaFCT">
+                <field name="nombre_tutor"/>
+                <field name="email_tutor"/>
+                <field name="telefono_tutor"/>
+                <field name="alumnado_ids"/>
+            </form>
+        </field>
+    </record>
+    <record id="view_tutoriafct_tree" model="ir.ui.view">
+        <field name="name">tutoriafct.tree</field>
+        <field name="model">instituto.tutoriafct</field>
+        <field name="arch" type="xml">
+            <tree string="TutoriaFCT">
+                <field name="nombre_tutor"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
