@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Feb24Marcos',
+    'name': 'Instituto',
     'version': '1.0',
     'category': 'Technical',
-    'description': 'Módulo instituto',
+    'description': 'Módulo instituto2',
     'author': 'DM2',
     'summary': 'Practicas de alumnos de FP',
     'depends': [
