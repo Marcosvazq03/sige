@@ -32,7 +32,19 @@ class Alumnado(models.Model):
 
 
 
-
+<record id="instituto_profesor_view_search" model="ir.ui.view">
+        <field name="name">instituto.profesor.search</field>
+        <field name="model">instituto.profesor</field>
+        <field name="arch" type="xml">
+            <search string="Buscar Profesor">
+                <field name="name" string="Nombre"/>
+                <field name="departamento" string="Departamento"/>
+                <group expand="0" string="Agrupar por">
+                    <filter string="Departamento" domain="[]" context="{'group_by':'departamento'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
 
 class Empresa(models.Model):
     _name = 'instituto.empresa'
