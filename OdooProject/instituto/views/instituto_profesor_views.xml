@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
- <!-- Alumno View -->
+ <!-- Profesor View -->
 
 <odoo>
     <record id="instituto_profesor_action" model="ir.actions.act_window">

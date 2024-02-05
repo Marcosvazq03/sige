@@ -4,3 +4,4 @@ access_instituto_valoracion,access_instituto_valoracion,model_instituto_valoraci
 access_instituto_practicas,access_instituto_practicas,model_instituto_practicas,base.group_user,1,1,1,1
 access_instituto_empresa,access_instituto_empresa,model_instituto_empresa,base.group_user,1,1,1,1
 access_instituto_profesor,access_instituto_profesor,model_instituto_profesor,base.group_user,1,1,1,1
+access_instituto_asignatura,access_instituto_asignatura,model_instituto_asignatura,base.group_user,1,1,1,1

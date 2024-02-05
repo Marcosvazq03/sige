@@ -8,3 +8,4 @@ from . import instituto_valoracion
 from . import instituto_practicas
 from . import instituto_empresa
 from . import instituto_profesor
+from . import instituto_asignatura

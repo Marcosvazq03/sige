@@ -9,6 +9,7 @@
             <menuitem id="instituto_alumno_menu_action" action="instituto_alumno_action"/>
             <menuitem id="instituto_empresa_menu_action" action="instituto_empresa_action"/>
             <menuitem id="instituto_profesor_menu_action" action="instituto_profesor_action"/>
+            <menuitem id="instituto_asignatura_menu_action" action="instituto_asignatura_action"/>
         </menuitem>
         <menuitem id="instituto_otros_menu" name="Otros">
             <menuitem id="instituto_valoracion_menu_action" action="instituto_valoracion_action"/>
