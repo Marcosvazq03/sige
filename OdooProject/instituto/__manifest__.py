@@ -18,6 +18,7 @@
         'views/instituto_practicas_views.xml',
         'views/instituto_valoracion_views.xml',
         'views/instituto_empresa_views.xml',
+        'views/instituto_profesor_views.xml',
         'views/instituto_menus.xml',
     ],
     'demo': [],

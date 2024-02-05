@@ -7,3 +7,4 @@ from . import instituto_alumno
 from . import instituto_valoracion
 from . import instituto_practicas
 from . import instituto_empresa
+from . import instituto_profesor
