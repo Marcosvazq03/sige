@@ -21,7 +21,10 @@
                 <field name="email"/>
                 <field name="ciclo"/>
                 <field name="coche"/>
-                <field name="media"/>
+                <field name="actitud"/>
+                <field name="ejercicios_clase"/>
+                <field name="proyecto"/>
+                <field name="examen_proyecto"/>
             </tree>
         </field>
     </record>
